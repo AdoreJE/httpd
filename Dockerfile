@@ -30,7 +30,7 @@
 
 # V2
 FROM alpine:3.14
-RUN apk add --no-cache apache2 tzdata
+RUN apk add --no-cache apache2 apache2-proxy tzdata
 ADD /mod_jk.so /usr/lib/apache2
 # Timezone
 RUN cp /usr/share/zoneinfo/Asia/Seoul /etc/localtime
